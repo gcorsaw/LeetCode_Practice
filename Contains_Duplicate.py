@@ -4,9 +4,8 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        num_set = set()
-        for num in nums:
-            if num in num_set:
-                return True
-            num_set.add(num)
-        return False
+        set_of_nums = set(nums)
+        if len(set_of_nums) < len(nums):
+            return True
+        else:
+            return False

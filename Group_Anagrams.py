@@ -4,11 +4,11 @@ class Solution(object):
         :type strs: List[str]
         :rtype: List[List[str]]
         """
-        group_anagrams = {}
-        for string in strs:
-            sorted_string = ''.join(sorted(string))
-            if sorted_string in group_anagrams:
-                group_anagrams[sorted_string].append(string)
+        anagram = {}
+        for words in strs:
+            sorted_word = ''.join(sorted(words))
+            if sorted_word not in anagram:
+                anagram[sorted_word] = [words]
             else:
-                group_anagrams[sorted_string] = [string]
-        return list(group_anagrams.values())
+                anagram[sorted_word].append(words)
+        return anagram.values()
