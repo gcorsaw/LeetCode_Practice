@@ -5,12 +5,18 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        num_index_map ={}
+
+        map_of_integers = {}
+
         if len(nums) < 2:
             return []
-        for index, num in enumerate(nums):
-            complement = target - num
-            if complement in num_index_map:
-                return [num_index_map[complement], index]
-            num_index_map[num] = index
+
+        for index in range(len(nums)):
+            num = nums[index]
+            numbers_complement = target - num
+
+            if numbers_complement in map_of_integers:
+                return [map_of_integers[numbers_complement], index]
+            map_of_integers[num] = index
+
         return []
