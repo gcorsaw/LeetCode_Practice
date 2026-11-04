@@ -4,11 +4,9 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        num_set = set()
-        
-        for values in nums:
-            if values in num_set:
+        number_set = set()
+        for num_value in nums:
+            if num_value in number_set:
                 return True
-            num_set.add(values)
-        
+            number_set.add(num_value)
         return False
