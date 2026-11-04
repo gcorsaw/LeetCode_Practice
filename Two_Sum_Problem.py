@@ -6,17 +6,18 @@ class Solution(object):
         :rtype: List[int]
         """
 
-        map_of_integers = {}
+        integer_map = {}
 
         if len(nums) < 2:
             return []
-
+        
         for index in range(len(nums)):
-            num = nums[index]
-            numbers_complement = target - num
+            number = nums[index]
+            number_complement = target - number
 
-            if numbers_complement in map_of_integers:
-                return [map_of_integers[numbers_complement], index]
-            map_of_integers[num] = index
+            if number_complement in integer_map:
+                return [integer_map[number_complement], index]
 
-        return []
+            integer_map[number] = index
+        
+        return[]

@@ -4,4 +4,11 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        return len(nums) != len(set(sum))
+
+        set_of_numbers = set()
+
+        for value in nums:
+            if value in set_of_numbers:
+                return True
+            set_of_numbers.add(value)
+        return False
