@@ -1,12 +1,9 @@
 class Solution(object):
-    def containsDuplicate(self, nums):
+    def isAnagram(self, s, t):
         """
-        :type nums: List[int]
+        :type s: str
+        :type t: str
         :rtype: bool
         """
-        number_set = set()
-        for num_value in nums:
-            if num_value in number_set:
-                return True
-            number_set.add(num_value)
-        return False
+        return sorted(s) == sorted(t)
+        
