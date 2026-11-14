@@ -1,5 +1,5 @@
 class Solution {
-    public boolean isAnagram(String s, String t) {
+    public boolean isValid(String s) {
         
     }
 }
